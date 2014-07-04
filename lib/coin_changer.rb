@@ -1,9 +1,10 @@
 class CoinChanger
-  def return_change(amount)
-    if amount == 1
-      [1]
-    else
-      []
-    end
+
+  def return_change(n)
+    result = []
+      if n >= 1
+        n.times {result << 1 } 
+      end
+    result
   end
 end
