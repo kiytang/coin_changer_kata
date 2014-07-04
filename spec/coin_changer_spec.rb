@@ -1,6 +1,7 @@
 require "coin_changer"
 
 describe "CoinChanger" do
+
 	let(:coin) {CoinChanger.new}
 
 	it "can create a new instance of CoinChanger "do	
@@ -13,5 +14,13 @@ describe "CoinChanger" do
 
 	it "returns change for 1 cent" do
 		expect(coin.return_change(1)). to eq [1]	
+	end
+
+	it "returns change for 2 cents" do
+		expect(coin.return_change(2)).to eq [1,1]
+	end
+
+	it "returns cahnge for 3 cents" do
+		expect(coin.return_change(3)).to eq [1,1,1]	
 	end
 end
