@@ -1,21 +1,15 @@
 class CoinChanger
 
+  COINS = [10,5,1]
+
   def return_change(n)
     result = []
-      while n >= 10
-        result << 10
-         n -= 10
+    COINS.each do |coin|
+      while n >= coin
+        result << coin
+         n -= coin
       end
-
-      while n >= 5
-        result << 5
-        n -= 5
-      end
-
-      while n >= 1
-        result << 1
-        n -= 1
-      end
-      result
+    end
+    result
   end
 end
