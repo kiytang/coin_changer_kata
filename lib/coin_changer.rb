@@ -1,6 +1,6 @@
 class CoinChanger
 
-  COINS = [25,10,5,1]
+  COINS = [100,50,25,10,5,1]
 
   def return_change(n)
     result = []

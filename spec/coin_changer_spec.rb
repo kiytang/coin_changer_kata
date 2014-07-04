@@ -55,4 +55,13 @@ describe "CoinChanger" do
 	it "returns change for 28" do
 		expect(coin.return_change(28)).to eq [25,1,1,1]		
 	end
+
+	it "returns change for a half dollar" do
+		expect(coin.return_change(50)).to eq [50]
+	end
+
+	it "returns change for a Golden dollar" do
+		expect(coin.return_change(100)).to eq [100]
+		
+	end
 end
