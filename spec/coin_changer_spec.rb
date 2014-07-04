@@ -24,7 +24,7 @@ describe "CoinChanger" do
 		expect(coin.return_change(3)).to eq [1,1,1]	
 	end
 
-	it "returns change for 5" do
+	it "returns change for a Nickel" do
 		expect(coin.return_change(5)).to eq [5]
 	end
 
@@ -36,11 +36,23 @@ describe "CoinChanger" do
 		expect(coin.return_change(7)).to eq [5,1,1]	
 	end
 
-	it "returns change for 10" do
+	it "returns change for a Dime" do
 		expect(coin.return_change(10)).to eq [10]	
 	end
 
 	it "returns change for 20" do
 		expect(coin.return_change(20)).to eq [10,10]	
+	end
+
+	it "returns change for 21" do
+		expect(coin.return_change(21)).to eq [10,10,1]
+	end
+
+	it "returns change for a Quarter" do
+		expect(coin.return_change(25)).to eq [25]
+	end
+
+	it "returns change for 28" do
+		expect(coin.return_change(28)).to eq [25,1,1,1]		
 	end
 end
